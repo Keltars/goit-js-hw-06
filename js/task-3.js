@@ -9,11 +9,11 @@ class StringBuilder {
   }
 
   padStart(str) {
-    this.#value = this.#value + str;
+    this.#value = str + this.#value;
   }
 
   padEnd(str) {
-    this.#value = str + this.#value;
+    this.#value = this.#value + str;
   }
 
   padBoth(str) {
