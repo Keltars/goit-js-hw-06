@@ -12,12 +12,16 @@ class Storage {
     this.#items.push(newItem);
   }
 
+  // removeItem(delItem) {
+  //   const index = this.#items.indexOf(delItem);
+  //   if (this.#items.indexOf(delItem) < 0) {
+  //     return;
+  //   }
+  //   this.#items.splice(index, 1);
+  // }
+
   removeItem(delItem) {
-    const index = this.#items.indexOf(delItem);
-    if (this.#items.indexOf(delItem) < 0) {
-      return;
-    }
-    this.#items.splice(index, 1);
+    this.#items = this.#items.filter(items => items !== delItem);
   }
 }
 
